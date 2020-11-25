@@ -1,0 +1,3 @@
+include ':keelchat'
+include ':keelstudy'
+include ':commonlibrary'

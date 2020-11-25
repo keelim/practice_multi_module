@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.keelim.study">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- GPS -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/splash_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.keelim.study.activity_cities.AllcityActivity"></activity>
+        <activity android:name="com.keelim.study.activity_cities.JejuActivity" />
+        <activity android:name="com.keelim.study.activity_cities.JeonbukActivity" />
+        <activity android:name="com.keelim.study.activity_cities.GwangjuActivity" />
+        <activity android:name="com.keelim.study.activity_cities.JeonnamActivity" />
+        <activity android:name="com.keelim.study.activity_cities.KyungnamActivity" />
+        <activity android:name="com.keelim.study.activity_cities.KyungbukActivity" />
+        <activity android:name="com.keelim.study.activity_cities.DaeguActivity" />
+        <activity android:name="com.keelim.study.activity_cities.UlsanActivity" />
+        <activity android:name="com.keelim.study.activity_cities.BusanActivity" />
+        <activity android:name="com.keelim.study.activity_cities.SejongActivity" />
+        <activity android:name="com.keelim.study.activity_cities.ChungbukActivity" />
+        <activity android:name="com.keelim.study.activity_cities.DaegeonActivity" />
+        <activity android:name="com.keelim.study.activity_cities.ChungnamActivity" />
+        <activity android:name="com.keelim.study.activity_cities.GangwonActivity" />
+        <activity android:name="com.keelim.study.activity_cities.IncheonActivity" />
+        <activity android:name="com.keelim.study.activity_cities.GyeonggiActivity" />
+        <activity android:name="com.keelim.study.activity.MyMessageActivity" />
+        <activity
+            android:name="com.keelim.study.activity.MainActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name="com.keelim.study.activity.PhotoZoomActivity" />
+        <activity android:name="com.keelim.study.activity.DetailCityActivity" />
+        <activity
+            android:name="com.keelim.study.activity.CommentActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name="com.keelim.study.activity.WriteActivity" />
+        <activity
+            android:name="com.keelim.study.activity_cities.SeoulActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.keelim.study.activity.SignUpActivity" />
+        <activity android:name="com.keelim.study.activity.LoginActivity" />
+        <activity
+            android:name="com.keelim.study.activity.SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.keelim.study.activity.ProfileActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.keelim.study.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
