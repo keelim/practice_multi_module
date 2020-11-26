@@ -3,16 +3,16 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-parcelize'
     id 'kotlin-kapt'
-    id 'com.google.gms.google-services'
-    id 'com.google.firebase.firebase-perf'
-    id 'com.google.firebase.crashlytics'
+//    id 'com.google.gms.google-services'
+//    id 'com.google.firebase.firebase-perf'
+//    id 'com.google.firebase.crashlytics'
 }
 
 android {
     compileSdkVersion 30
     defaultConfig {
         applicationId "com.mtjin.studdytogether"
-        minSdkVersion 16
+        minSdkVersion 24
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -28,7 +28,7 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation project(':commonlibrary')
+
     //페이스북로그인
     implementation 'com.facebook.android:facebook-login:[4,5)'
 
